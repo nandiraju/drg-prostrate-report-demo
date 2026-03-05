@@ -44,11 +44,30 @@
             pointer-events: none;
         }
         
+        /* Container enforcing clipping for the ElevenLabs branding */
+        .widget-wrapper {
+            position: absolute;
+            bottom: 50px; /* Safe distance from bottom edge */
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 9999;
+            overflow: hidden; /* Clips anything outside its bounds */
+            border-radius: 40px; /* Keeps the button shape smooth if clipped around edges */
+        }
+
+        /* Negative margin offsets the 'powered by' text down so it falls outside the hidden overflow */
+        elevenlabs-convai {
+            display: block;
+            margin-bottom: -30px; /* Hides the text */
+        }
     </style>
 </head>
 <body>
     <div class="bg-blur"></div>
     <div class="bg-sharp"></div>
-        <elevenlabs-convai agent-id="nV1qVKfHBpuKWzA3EhVG"></elevenlabs-convai><script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
+    <div class="widget-wrapper">
+        <elevenlabs-convai agent-id="nV1qVKfHBpuKWzA3EhVG"></elevenlabs-convai>
+    </div>
+    <script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
 </body>
 </html>
