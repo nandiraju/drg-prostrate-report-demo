@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Dr. G AI Consultant</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #020617; /* Dark slate background */
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            overflow: hidden;
+            position: relative;
+            touch-action: manipulation;
+        }
+
+        /* Logo container perfectly centered */
+        .center-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+        }
+
+        .logo {
+            width: 60%;
+            max-width: 300px;
+            height: auto;
+            object-fit: contain;
+            filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.3));
+            animation: pulse-opacity 3.5s ease-in-out infinite alternate;
+        }
+
+        @keyframes pulse-opacity {
+            0% { opacity: 0.6; }
+            100% { opacity: 1; }
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="center-container">
+        <img src="./logo.svg" alt="Dr. G Logo" class="logo">
+    </div>
+
+    
+        <elevenlabs-convai agent-id="nV1qVKfHBpuKWzA3EhVG"></elevenlabs-convai><script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
+</body>
+</html>
