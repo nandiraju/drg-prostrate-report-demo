@@ -38,13 +38,21 @@
             display: block;
             margin-bottom: -25px; 
         }
+
+        /* Hero Image styling */
+        .hero-img {
+            max-width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
     </style>
 </head>
 <body>
-        <div class="widget-clipper">
-            <elevenlabs-convai agent-id="nV1qVKfHBpuKWzA3EhVG"></elevenlabs-convai>
-        </div>
-    
+    <img src="./bg.png" alt="Background" class="hero-img">
+
+    <div class="widget-clipper">
+        <elevenlabs-convai agent-id="nV1qVKfHBpuKWzA3EhVG"></elevenlabs-convai>
+    </div>
     <script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
 </body>
 </html>
