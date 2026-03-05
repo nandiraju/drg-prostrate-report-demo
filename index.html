@@ -14,24 +14,14 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(135deg, #0f0f0f 0%, #303030 100%); /* Black and grey gradient */
+            background: radial-gradient(circle, #303030 0%, #000000 100%); /* Radial grey to black gradient */
             font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             overflow: hidden;
             position: relative;
             touch-action: manipulation;
         }
         
-        /* Inner wrapper that does the clipping and positioning */
-        .widget-clipper {
-            position: absolute;
-            bottom: 50px;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 9999;
-            overflow: hidden;
-            display: inline-block;
-            border-radius: 40px; /* Soft round edges to match the pill */
-        }
+ 
 
         /* Negative margin hides the bottom text */
         elevenlabs-convai {
@@ -50,9 +40,9 @@
 <body>
     <img src="./bg.png" alt="Background" class="hero-img">
 
-    <div class="widget-clipper">
+    
         <elevenlabs-convai agent-id="nV1qVKfHBpuKWzA3EhVG"></elevenlabs-convai>
-    </div>
+    
     <script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
 </body>
 </html>
