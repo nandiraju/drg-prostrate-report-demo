@@ -31,10 +31,13 @@
 
         /* Hero Image styling */
         .hero-img {
-            max-width: 100%;
+            max-width: calc(100% - 40px); /* Accounts for left and right margins */
             height: auto;
             object-fit: contain;
             z-index: 1; /* Keeps hero image above the animated background */
+            margin: 0 20px; /* 20px margin horizontal */
+            border-radius: 30px;
+            opacity: 0.9;
         }
         
         /* Animated Logo Background Wrapper */
@@ -45,7 +48,7 @@
             width: 150vmax; /* Uses vmax to ensure it covers the screen even on tall devices */
             height: 150vmax;
             transform: translate(-50%, -50%);
-            opacity: 0.15; /* Increased opacity to become visible */
+            opacity: 0.6; /* Increased opacity to become visible */
             z-index: 0;
             pointer-events: none;
             display: flex;
@@ -70,7 +73,7 @@
 <body>
     <!-- Animated Logo Background -->
     <div class="logo-bg-wrapper">
-        <img src="./logo.svg" alt="">
+        <img src="./logo.svg" alt="" >
     </div>
 
     <img src="./bg.png" alt="Background" class="hero-img">    
