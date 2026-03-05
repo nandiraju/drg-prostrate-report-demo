@@ -44,10 +44,38 @@
             100% { opacity: 1; }
         }
 
+        /* Large, highly transparent rotating background */
+        .bg-logo {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 150vw;
+            height: 150vw;
+            max-width: 1000px;
+            max-height: 1000px;
+            object-fit: contain;
+            opacity: 0.05; /* highly transparent */
+            z-index: 0;
+            pointer-events: none;
+            animation: rotate-bg 60s linear infinite;
+        }
+
+        @keyframes rotate-bg {
+            0% { transform: translate(-50%, -50%) rotate(0deg); }
+            100% { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+
+        /* Ensure main logo sits above background */
+        .center-container {
+            z-index: 10;
+        }
         
     </style>
 </head>
 <body>
+    <!-- Background Rotating Logo -->
+    <img src="./logo.svg" alt="" class="bg-logo">
+
     <div class="center-container">
         <img src="./logo.svg" alt="Dr. G Logo" class="logo">
     </div>
