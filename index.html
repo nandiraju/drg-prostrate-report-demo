@@ -44,29 +44,40 @@
             pointer-events: none;
         }
         
-        /* Container enforcing clipping for the ElevenLabs branding */
-        .widget-wrapper {
+        /* Restored container to ensure full width for the widget script to inject relative to */
+        .widget-container {
             position: absolute;
-            bottom: 50px; /* Safe distance from bottom edge */
+            bottom: 50px;
             left: 50%;
             transform: translateX(-50%);
             z-index: 9999;
-            overflow: hidden; /* Clips anything outside its bounds */
-            border-radius: 40px; /* Keeps the button shape smooth if clipped around edges */
+            width: 100%;
+            display: flex;
+            justify-content: center;
         }
 
-        /* Negative margin offsets the 'powered by' text down so it falls outside the hidden overflow */
+        /* Inner wrapper that does the clipping */
+        .widget-clipper {
+            overflow: hidden;
+            display: inline-block;
+            border-radius: 40px; /* Soft round edges to match the pill */
+        }
+
+        /* Negative margin hides the bottom text */
         elevenlabs-convai {
             display: block;
-            margin-bottom: -30px; /* Hides the text */
+            margin-bottom: -25px; 
         }
     </style>
 </head>
 <body>
     <div class="bg-blur"></div>
     <div class="bg-sharp"></div>
-    <div class="widget-wrapper">
-        <elevenlabs-convai agent-id="nV1qVKfHBpuKWzA3EhVG"></elevenlabs-convai>
+    
+    <div class="widget-container">
+        <div class="widget-clipper">
+            <elevenlabs-convai agent-id="nV1qVKfHBpuKWzA3EhVG"></elevenlabs-convai>
+        </div>
     </div>
     <script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
 </body>
