@@ -42,11 +42,10 @@
             position: absolute;
             top: 50%;
             left: 50%;
-            width: 150vw; /* Make it large and high scale */
-            height: 150vw;
-            margin-top: -75vw;
-            margin-left: -75vw;
-            opacity: 0.05; /* Very transparent */
+            width: 150vmax; /* Uses vmax to ensure it covers the screen even on tall devices */
+            height: 150vmax;
+            transform: translate(-50%, -50%);
+            opacity: 0.15; /* Increased opacity to become visible */
             z-index: 0;
             pointer-events: none;
             display: flex;
